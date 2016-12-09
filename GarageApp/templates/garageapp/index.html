@@ -1,0 +1,9 @@
+{% if latest_contact_list %}
+    <ul>
+        {% for contact in latest_contact_list %}
+            <li><a href="/garageapp/{{ contact.id }}/">{{ contact.contact_first_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
